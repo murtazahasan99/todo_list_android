@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.todonotes.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_add3"
+            app:destination="@id/add2" />
+    </fragment>
+    <fragment
+        android:id="@+id/add2"
+        android:name="com.example.todonotes.Add"
+        android:label="fragment_add2"
+        tools:layout="@layout/fragment_add2" >
+        <argument
+            android:name="ID"
+            app:argType="integer" />
+        <argument
+            android:name="Title"
+            app:argType="string" />
+        <argument
+            android:name="Description"
+            app:argType="string" />
+    </fragment>
+</navigation>
